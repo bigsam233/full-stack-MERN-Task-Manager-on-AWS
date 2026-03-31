@@ -18,7 +18,7 @@ The application is fully **containerized using Docker**, ensuring consistent env
 The application is deployed inside a **private subnet**, meaning the core application infrastructure is **not directly exposed to the internet**. Traffic is securely routed through an **Application Load Balancer (ALB)**, following real-world cloud architecture best practices.
 
 ## 🏗️ Architecture
-[![full-stack-MERN-by-SAmuel-Tettey-fio.png](https://i.postimg.cc/Y9W830BN/full-stack-MERN-by-SAmuel-Tettey-fio.png)](https://postimg.cc/YGt12p9j)
+[![full-stack-MERN-by-Samuel-Tettey-fio.png](https://i.postimg.cc/kXY2w8SZ/full-stack-MERN-by-Samuel-Tettey-fio.png)](https://postimg.cc/1f6R38Jc)
 
 This project follows a **production-grade AWS architecture**:
 
@@ -112,14 +112,14 @@ docker-compose up -d --build
 
 
 ### 6. Load Balancer Setup  
-* Created Target Group (port 3000)  
+* Created Target Group (port 80)  
 * Registered private EC2 instance  
 * Configured health checks (/)
 
 ### 7. Application Load Balancer (ALB)  
 * Deployed ALB in public subnets  
 * Configured listener: HTTP:80 → Target Group  
-* Updated security groups: ALB → EC2 (port 3000)
+* Updated security groups: ALB → EC2 (port 80)
 
 ##### *Application Load Balancer for MERN Task App*
 [![Load-balancer.png](https://i.postimg.cc/3rbq5thd/Load-balancer.png)](https://postimg.cc/V5ngXBd8)
@@ -132,7 +132,7 @@ Resolved real-world issues including:
 * Network connectivity between ALB and private EC2
 
 ### Application Running  
-[![Working-Application.png](https://i.postimg.cc/x1Drzv3H/Working-Application.png)](https://postimg.cc/gnDB965k)
+[![Working-app.png](https://i.postimg.cc/ZKnR9RQF/Working-app.png)](https://postimg.cc/svFyqVsv)
 
 ## 📬 Contact  
 If you’re a recruiter or hiring manager looking for a Cloud/DevOps Engineer, feel free to connect via email at samuel.tfio@gmail.com
